@@ -41,10 +41,12 @@ OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 BOARD_USES_ALSA_AUDIO := true
 AUDIO_FEATURE_ENABLED_MULTI_VOICE_SESSIONS := true
 
-#Camera
-TARGET_USES_AOSP := true
+# Camera
+TARGET_COMPILE_WITH_MSM_KERNEL := true
 BOARD_QTI_CAMERA_32BIT_ONLY := true
 BOARD_QTI_CAMERA_V2 := true
+USE_DEVICE_SPECIFIC_CAMERA := true
+DEVICE_SPECIFIC_CAMERA_PATH := hardware/sony/camera
 
 # GPS definitions for Qualcomm solution
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := $(TARGET_BOARD_PLATFORM)
@@ -68,7 +70,7 @@ ifeq ($(HOST_OS),linux)
   endif
 endif
 
-BUILD_KERNEL := true
+#BUILD_KERNEL := true
 #-include device/sony/common-kernel/KernelConfig.mk
 
 # Include build helpers for QCOM proprietary
