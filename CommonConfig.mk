@@ -65,7 +65,7 @@ ifeq ($(HOST_OS),linux)
 endif
 
 BUILD_KERNEL := true
-include device/sony/common-headers/KernelHeaders.mk
+-include device/sony/common-headers/KernelHeaders.mk
 -include device/sony/common-kernel/KernelConfig.mk
 
 # Include build helpers for QCOM proprietary
