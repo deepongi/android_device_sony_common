@@ -12,6 +12,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+#dont build AOSP camera HAL
+USE_SONY_CAMERA := true
+
+# Healthd
+HEALTHD_FORCE_BACKLIGHT_CONTROL := true
+HEALTHD_ENABLE_TRICOLOR_LED := true
+RED_LED_PATH := /sys/class/leds/led:rgb_red/brightness
+GREEN_LED_PATH := /sys/class/leds/led:rgb_green/brightness
+BLUE_LED_PATH := /sys/class/leds/led:rgb_blue/brightness
+
 PRODUCT_VENDOR_KERNEL_HEADERS := device/sony/common/kernel-headers
 
 TARGET_NO_RADIOIMAGE := true
