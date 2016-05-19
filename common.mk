@@ -12,6 +12,22 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Kernel
+TARGET_KERNEL_SOURCE := kernel/sony/msm
+
+# init_sony tools
+PRODUCT_PACKAGES += \
+    init_sony \
+    keycheck
+
+# SELinux
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.build.selinux=1
+
+# Properties
+PRODUCT_PROPERTY_OVERRIDES += \
+    telephony.lteOnGSMDevice=1
+
 DEVICE_PACKAGE_OVERLAYS += device/sony/common/overlay
 
 PRODUCT_COPY_FILES += \
