@@ -12,6 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Init
+PRODUCT_PACKAGES += \
+    init_sony \
+    keycheck \
+    toybox_static
+
 DEVICE_PACKAGE_OVERLAYS += device/sony/common/overlay
 
 # Common Specific Permissions
